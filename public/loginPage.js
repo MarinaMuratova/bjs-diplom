@@ -5,17 +5,17 @@ userForm.loginFormCallback = function(data){
     if (response.success){ 
        location.reload();
     } else{
-       return setLoginErrorMessage(message);
+       userForm.setLoginErrorMessage(response.data);
     }
   });   
 }
 
 userForm.registerFormCallback = function(data){
- ApiConnector.login(data, (response) => {
+ ApiConnector.register(data, (response) => {
     if (response.success){ 
        location.reload();
     } else{
-       return setLoginErrorMessage(message);
+       userForm.setRegisterErrorMessage(response.data);
     }
   });   
 }

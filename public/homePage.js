@@ -11,7 +11,7 @@ logoutButton.action = function (){
 //Получение информации о пользователе
 ApiConnector.current((response) => {
    if (response.success){ 
-          ProfileWidget.showProfile(response.data);
+        ProfileWidget.showProfile(response.data);
     }
 })
 
@@ -26,7 +26,7 @@ function getStocks (){
        }
 	});
 }
-
+getStocks();
 setInterval(getStocks, 60000); //было setInterval(() => getStocks(), 60000); новая запись короче
 
 
